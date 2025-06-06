@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.ipynb_checkpoints
+
+# Environnements virtuels
+env/
+venv/
+.venv/
+
+# Fichiers de configuration locaux
+*.env
+.env.*
+
+
+# Données temporaires ou résultats
+*.log
+*.tmp
+*.out
+
+# VS Code
+.vscode/
+
+# Gradio cache
+gradio_cached_examples/
+
+# Dossiers système
+.DS_Store
+Thumbs.db

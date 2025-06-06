@@ -1,0 +1,10 @@
+# Deep learning & vision
+ultralytics
+opencv-python
+numpy
+Pillow
+scipy
+
+# Interface web
+gradio
+
