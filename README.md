@@ -4,12 +4,19 @@ This project provides a simple web interface to perform object detection using Y
 
 ---
 
+## Example
+
+![YOLO + SAM Demo](./assets/illustration.png)
+
+---
+
 ## Features
 
 - **YOLO Detection:** Detects objects in your image using a YOLO model.
 - **Label Selection:** Choose which label/class you want to segment from the detected objects.
 - **SAM Segmentation:** Segments each detected object using the Segment Anything Model.
 - **Web Interface:** Easy-to-use Gradio interface.
+- **Custom Training:** You can train your own YOLO model to detect new or custom labels/classes. See [Ultralytics YOLO documentation](https://docs.ultralytics.com/) for training instructions.
 
 ---
 
@@ -27,8 +34,22 @@ This project provides a simple web interface to perform object detection using Y
    ```
 
 3. **Download YOLO and SAM models:**
-   - Two models are already uploaded in the `models/` folder.
-   - If you want to use your own models, place them in the `models/` directory.
+
+   Download the weights and place them in the `models/` directory:
+
+   - **YOLOv8n:**  
+     [Download yolov8n.pt](https://github.com/ultralytics/assets/releases/download/v0.0.0/yolov8n.pt)  
+     or via terminal:  
+     ```bash
+     wget -O models/yolo.pt https://github.com/ultralytics/assets/releases/download/v0.0.0/yolov8n.pt
+     ```
+
+   - **SAM (Ultralytics format):**  
+     [Download sam_b.pt](https://github.com/ultralytics/assets/releases/download/v8.1.0/sam_b.pt)  
+     or via terminal:  
+     ```bash
+     wget -O models/sam2_b.pt https://github.com/ultralytics/assets/releases/download/v8.1.0/sam_b.pt
+     ```
 
 ---
 
@@ -58,15 +79,15 @@ python app.py
 
 ## Notes
 
-- Make sure you use the Ultralytics-compatible weights for both YOLO and SAM.
+
 - The segmentation masks are returned as transparent PNGs (RGBA).
+- **Custom YOLO models:** You can train your own YOLO model to detect new objects or classes, then use the resulting weights in this pipeline.
 
 ---
 
 ## License
 
 MIT License
-
 
 ---
 
