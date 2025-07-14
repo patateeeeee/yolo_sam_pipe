@@ -24,7 +24,7 @@ This project provides a simple web interface to perform object detection using Y
 
 1. **Clone the repository:**
    ```bash
-   git clone <repo-url>
+   git clone https://github.com/patateeeeee/yolo_sam_pipe.git
    cd yolo_sam_pipe
    ```
 
